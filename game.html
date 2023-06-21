@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SAYNA || GAME || BATMAN 2</title>
+    <meta name="description" content="GAME PAGE / BATMAN 2 / SAYNA / PROJET JAVASCRIPT">
+    <meta name="keywords" content="BATMAN, GAME, JAVASCRIPT">
+    <meta name="author" content="Fenosoa Dianà">
+    <link rel="stylesheet" type="text/css" href="./Assets/CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="./Assets/CSS/game-style.css">
+    <link rel="icon" href="./Assets/image/Logos/logo_bat_flèche_2.png" type="image/x-icon">
+</head>
+<body>
+
+    <header id="page-top">
+        <h1></h1>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a href="./index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="#"  class="active">GAME</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside class="fade-in">
+        <ul>
+            <li class="cursor-pointer" id="batman-up-button">
+                <img class="hover-jaune-bataman" src="Assets/image/Logos/logo_bat_flèche.png" alt="Logo aller en haut du page">
+            </li>
+        
+            <li>
+                <a href="">
+                    <img class="social-network hover-jaune-bataman" src="Assets/image/Logos/icon_facebook.png" alt="Logo facebook contact">
+                </a>
+            </li>
+        
+            <li>
+                <a href="">
+                    <img class="social-network hover-jaune-bataman" src="Assets/image/Logos/icon_ig.png" alt="Logo instagram contact">
+                </a>
+            </li>
+        
+            <li>
+                <a href="">
+                    <img class="social-network hover-jaune-bataman" src="Assets/image/Logos/icon_tw.png" alt="Logo twitter contact">
+                </a>
+            </li>
+        
+           <li class="mt-10 cursor-pointer" id="batman-down-button">
+                <img class="hover-jaune-bataman" src="Assets/image/Logos/logo_bat_flèche_2.png" alt="Logo aller en bas du page">
+            </li>
+        </ul>
+    
+    </aside>
+
+    <main>
+
+        <section class="introduction">
+            <div class="part-title fade-in-start">
+                <h1>LET’S PLAY A <br> LITTLE GAME...</h1>
+            </div>
+            <div class="margin-200">
+                <img src="./Assets/image/Logos/flèche_down_header.png" alt='Flèche down header'>
+            </div>
+        </section>
+        <section class="game" id="start">
+            <div class="content-game">
+                <h2 class="fade-in">connaissez vous bien le chevalier noir ?</h2>
+                <div>
+                    <img class="fade-zoom" src="./Assets/game/Illustrations/Batgame_2.png">
+                </div>
+                <button onclick="startGame()">DÉMARRER LE QUIZ</button>
+            </div>
+        </section>
+        
+        <section class="game" id="game">
+            <div class="content-game">
+                <h2><span id="progression"></span>/15</h2>
+                <div class="questions">
+                    <p class="question fade-in-start" id="question">
+                        
+                    </p>
+                    <div class="responses">
+                        <div class="image" id="image">
+                            
+                        </div>
+                        <div class="choix">
+                            <form id="form-res">
+                                <ul id="choices">
+                                
+                                </ul>
+                            </form>
+                        </div>
+                        <div id="illustrations">
+                            <img src="./Assets/Image/Game/Batgame_3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <button onclick="next()">QUESTION SUIVANT</button>
+            </div>
+        </section>
+    </main>
+
+    <footer id="page-bottom">
+            <div class="text">
+                <img src="Assets/image/Logos/icon_WB.png">
+                Ce projet respecte l’univers cinématographique des films Batman récents. Version Nolan & Snyder & Reeves
+            </div>
+            <div class="logos">
+                <ul class="-ml-5">
+                    <li>
+                        <a href="">
+                            <img class="hover-jaune-bataman" src="Assets/image/Logos/logo_sayna_white.png">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="">
+                            <img class="hover-jaune-bataman" class="-ml-5" src="Assets/image/Logos/icon_x.png">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="">
+                            <img  class="hover-jaune-bataman"class="-ml-5" src="Assets/image/Logos/icon_DC.png">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="">
+                            <img class="hover-jaune-bataman" src="Assets/image/Logos/icon_facebook.png">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="">
+                            <img class="hover-jaune-bataman" src="Assets/image/Logos/icon_ig.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="hover-jaune-bataman" src="Assets/image/Logos/icon_tw.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </footer>
+
+    <div class="popup-error">
+        <div class="popup-content">
+            <h2 id="popup-title"></h2>
+            <p id="popup-message">
+                
+            </p>
+            <button id="restart-quiz">RECOMMENCER LE QUIZ</button>
+        </div>
+    </div>
+    <div id="canvas-container">
+      <canvas id="canvas" width="1300" height="700"></canvas>
+    </div>
+    <script src="Assets/js/scripts.js"></script>
+    <script src="Assets/js/game-script.js"></script> 
+</body>
+</html>
